@@ -29,27 +29,27 @@ steps:
 
 
 #Push all the images
-#  push_to_registry_vote:
-#    title: Pushing to Vote Docker Registry
-#    type: push
+  push_to_registry_vote:
+    title: Pushing to Vote Docker Registry
+    type: push
 
     #A candidate is the image that we want to push to registry
-#    candidate: '${{build_image_vote}}'
+    candidate: '${{build_image_vote}}'
 
     # You can push the image with whatever tag you want. In our example we use CF_BRANCH, which is a variable in
     # the build process, accessible throughout the entire flow.
-#    tag: '${{CF_BRANCH}}'
+    tag: '${{CF_BRANCH}}'
 
 
-#  push_to_registry_result:
-#    title: Pushing to Result Docker Registry
-##    type: push
- #   candidate: '${{build_image_result}}'
-#    tag: '${{CF_BRANCH}}'
+  push_to_registry_result:
+    title: Pushing to Result Docker Registry
+    type: push
+    candidate: '${{build_image_result}}'
+    tag: '${{CF_BRANCH}}'
 
 
-#  push_to_registry_worker:
-#    title: Pushing to Worker Docker Registry
-#    type: push
-#    candidate: '${{build_image_worker}}'
-#    tag: '${{CF_BRANCH}}'
+  push_to_registry_worker:
+    title: Pushing to Worker Docker Registry
+    type: push
+    candidate: '${{build_image_worker}}'
+    tag: '${{CF_BRANCH}}'
